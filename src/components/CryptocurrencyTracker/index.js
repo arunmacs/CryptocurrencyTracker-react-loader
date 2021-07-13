@@ -15,6 +15,7 @@ class CryptocurrencyTracker extends Component {
     const API_URL = 'https://apis.ccbp.in/crypto-currency-converter'
     const response = await fetch(API_URL)
     const data = await response.json()
+    console.log(data)
     const cryptoData = data.map(item => ({
       id: item.id,
       currencyLogoUrl: item.currency_logo,
@@ -36,7 +37,7 @@ class CryptocurrencyTracker extends Component {
         <div className="banner-container">
           <img
             src="https://assets.ccbp.in/frontend/react-js/cryptocurrency-bg.png"
-            alt="cryptocurrency"
+            alt="Cryptocurrency Tracker"
             className="banner"
           />
         </div>
